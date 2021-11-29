@@ -421,7 +421,7 @@ In the #### Example directory structure below, assume you used Windows Explorer 
 | **                 |       Bold        | My `**`strong`**` word         |        [Bold](#example-5)        |
 | __                 |       Bold        | My `__`strong`__` word         |        [Bold](#example-5)        |
 | \`                 |   Display code    | using \``print("Hello")`\`     |    [Code inline](#example-6)     |
-| \`\`\`             |   Display code    | ![snippet](imgs\example-7.jpg) |     [Code Block](#example-7)     |
+| \`\`\`             |   Display code    | ![snippet](imgs/example-7.jpg) |     [Code Block](#example-7)     |
 | \[label\]\(url\)   |       Links       | \[home\]\(example.com\)        |         [links](#links)          |
 | \!\[name\]\(path\) |      Images       | \[Thumb\]\(thumb.jpg\)         |        [Images](#images)         |
 | `n`.               |       List        | `1.` Open the box              |   [Ordered List](#example-13)    |
