@@ -66,7 +66,7 @@ You can try it out, right now, using the online [Dingus](https://daringfireball.
 
 ## Disclaimer
 
-This a brief #### Example I made to explain some syntax and some concepts from markdown and how you could organize and navigate in your notes inside your own project. 💗
+This a brief example I made to explain some syntax and some concepts from markdown and how you could organize and navigate in your notes inside your own project. 💗
 
 ## Titles and subtitles
 
