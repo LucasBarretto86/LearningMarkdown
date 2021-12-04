@@ -66,7 +66,7 @@ You can try it out, right now, using the online [Dingus](https://daringfireball.
 
 ## Disclaimer
 
-This a brief example I made to explain some syntax and some concepts from markdown and how you could organize and navigate in your notes inside your own project. 💗
+This a brief example I made to explain some syntax and some concepts from markdown and how someone could organize and navigate in their notes inside a project. 💗
 
 ## Titles and subtitles
 
@@ -198,7 +198,7 @@ To add block of code to show in detail a code add triples \`.
 
 ```md
     ```py(rb, js, cpp, md)
-    names = ["Lucas", "XiaoJiao"]
+    names = ["Lucas", "Someone"]
 
     def greetings(name):
         print(f"Hello {name}")
@@ -210,7 +210,7 @@ To add block of code to show in detail a code add triples \`.
 Output
 
 ```py
-names = ["Lucas", "XiaoJiao"]
+names = ["Lucas", "Someone"]
 
 def greetings(name):
     print(f"Hello {name}")
@@ -377,7 +377,7 @@ After second line any new line will be new row in the table
 | Name      |  Age  | Height  |
 | :-------- | :---: | :-----: |
 | Lucas     |  35   | 1.76m   |
-| Xiao Jiao |  35   | 1.61m   |
+| Someone   |  35   | 1.61m   |
 ```
 
 Output
@@ -385,7 +385,7 @@ Output
 | Name      |  Age  | Height  |
 | :-------- | :---: | :-----: |
 | Lucas     |  35   | 1.76m   |
-| Xiao Jiao |  35   | 1.61m   |
+| Someone   |  35   | 1.61m   |
 
 ## Appendix
 
