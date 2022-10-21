@@ -34,9 +34,10 @@
   - [Images](#images)
     - [Regular images](#regular-images)
       - [Example-11](#example-11)
-    - [Gifs](#gifs)
+    - [Gif](#gif)
       - [Example-12](#example-12)
   - [Lists](#lists)
+  - [TODO List](#todo-list)
     - [Ordered List](#ordered-list)
       - [Example-13](#example-13)
     - [Unordered List](#unordered-list)
@@ -78,13 +79,13 @@ To set title and subtitles prepend `#` on the begin of a line you want to turn i
 
 #### Example-1
 
-```md
+```txt
 # This is a Title
 ```
 
-Output
+**Output:**
 
-![Title #### Output](imgs/titles.jpg)
+![Title](imgs/titles.jpg)
 
 [Go to Code Table](#code-table)
 
@@ -92,7 +93,7 @@ Output
 
 #### Example-2
 
-```md
+```txt
 ## This is a Subtitle
 ### This is a Subtitle
 #### This is a Subtitle
@@ -100,9 +101,9 @@ Output
 ###### This is a Subtitle
 ```
 
-Output
+**Output:**
 
-![Title #### Output](imgs/subtitles.jpg)
+![Title](imgs/subtitles.jpg)
 
 [Go to Code Table](#code-table)
 
@@ -114,41 +115,37 @@ It's just plain text written in your notes, like this one.
 
 ### Blockquote
 
-Highlight a sentence by prepending `>` on begining of a line you want to turn into a highlight block of content.
+Highlight a sentence by prepending `>` on beginning of a line you want to turn into a highlight block of content.
 
-You can nest many blockquotes you want by prepending more `>` together, each `>` adds a new blockquote level.
+You can nest many blockquote you want by prepending more `>` together, each `>` adds a new blockquote level.
 
 #### Example-3
 
-```md
+```txt
 > This is a highlighted text in your notes
->> Many blockquotes nested
+>> Many blockquote nested
 ```
 
-Output
+**Output:**
 
 > This is a highlighted text in your annotation
->> Many blockquotes nested
+>> Many blockquote nested
 
 [Go to Code Table](#code-table)
 
 ### Emphasizing
 
-To emphasize some bit of a paragraph add around the text to be emphasized single `*` or single `_`.
+To emphasize some bit of a paragraph add around the text to be emphasized single `*`.
 
 #### Example-4
 
-```md
+```txt
 Some of these words *are emphasized*.
-
-Some of these words _are emphasized also_.
 ```
 
-Output
+**Output:**
 
 Some of these words *are emphasized*.
-
-Some of these words _are emphasized also_.
 
 [Go to Code Table](#code-table)
 
@@ -158,17 +155,17 @@ To turn a bit of a paragraph into bold add around the text to be bolded double `
 
 #### Example-5
 
-```md
+```txt
 Words can't describe how **strong** LOVE can be.
 
 Words can't describe how __strong__ LOVE can be.
 ```
 
-Output
+**Output:**
 
 Words can't describe how **strong** LOVE can be.
 
-Words can't describe how __strong__ LOVE can be.
+Words can't describe how **strong** LOVE can be.
 
 [Go to Code Table](#code-table)
 
@@ -180,11 +177,11 @@ To add snippets of code inside a paragraph, to make some kind of reference add a
 
 #### Example-6
 
-```md
+```txt
 This paragraph contains a snippet of code `code_reference`
 ```
 
-Output
+**Output:**
 
 This paragraph contains a snippet of code `print("Hello Wold")`
 
@@ -196,18 +193,18 @@ To add block of code to show in detail a code add triples \`.
 
 #### Example-7
 
-```md
-    ```py(rb, js, cpp, md)
-    names = ["Lucas", "Someone"]
+~~~txt
+  ```py(rb, js, cpp, md)
+  names = ["Lucas", "Someone"]
+  
+  def greetings(name):
+      print(f"Hello {name}")
+  
+  greetings(names[1])
+  ```
+~~~
 
-    def greetings(name):
-        print(f"Hello {name}")
-
-    greetings(names[1])
-    ```
-```
-
-Output
+**Output:**
 
 ```py
 names = ["Lucas", "Someone"]
@@ -228,11 +225,11 @@ To add external links use the syntax `[Link label](website_address)`
 
 #### Example-8
 
-```md
+```txt
 [QQ home page](https://im.qq.com/index)
 ```
 
-Output
+**Output:**
 
 [QQ home page](https://im.qq.com/index)
 
@@ -242,15 +239,15 @@ Output
 
 Anchors are used when you want to make a reference to the same file but throwing the reader for specific header(Title or Subtitle) of your note: `[Header Title](#header-title)`
 
-Notice that you have to convert header title or subtitle into a slug [What is a Slug?](#what-is-a-slug) and you have to prepend a sigle `#`
+Notice that you have to convert header title or subtitle into a slug [What is a Slug?](#what-is-a-slug) and you have to prepend a single `#`
 
 #### Example-9
 
-```md
+```txt
 [What is Markdown?](#what-is-markdown)
 ```
 
-Output
+**Output:**
 
 [What is Markdown?](#what-is-markdown)
 
@@ -262,11 +259,11 @@ Notice that you need to do use a relative path, read more about that in [Absolut
 
 #### Example-10
 
-```md
+```txt
 [Example](example-10/local_file.md)
 ```
 
-Output
+**Output:**
 
 [Example](example-10/local_file.md)
 
@@ -278,41 +275,57 @@ Images works almost exactly like links, the only difference is the syntax becaus
 
 #### Example-11
 
-```md
+```txt
 ![ Example](imgs/image.png)
 ```
 
-Output
+**Output:**
 
 ![ Example](imgs/image.png)
 
-### Gifs
+### Gif
 
 #### Example-12
 
-```md
+```txt
 ![Example](imgs/run.gif)
 ```
 
-Output
+**Output:**
 
 ![Example](imgs/run.gif)
 
 ## Lists
 
+## TODO List
+
+To create a todo list it's used the prefix `- [ ]`, to check this todo it's used `- [X]`
+
+```txt
+- [ ] First do this
+- [ ] After do that
+- [ ] After that do that too
+```
+
+**Output:**
+
+- [ ] First do this
+- [ ] After do that
+- [ ] After that do that too
+
 ### Ordered List
 
-To create a list preprend a numeric order paramentes `1.`.
+To create a list prepend a numeric order prefix `1.`.
 
 #### Example-13
 
-```md
+```txt
 1. Put oil on the pan
 2. Break the eggs
 3. Put eggs on the pan scramble it
 ```
 
-Output
+**Output:**
 
 1. Put oil on the pan
 2. Break the eggs
@@ -320,15 +333,15 @@ Output
 
 ### Unordered List
 
-To create a list preprend `-`.
+To create a list prepend `-`.
 
-```md
+```txt
 - Summary
   - Chapter 1
     - First topic
 ```
 
-Output
+**Output:**
 
 - Summary
   - Chapter 1
@@ -336,20 +349,20 @@ Output
 
 #### Example-14
 
-```md
+```txt
 ```
 
-Output
+**Output:**
 
 ### Table of Contents
 
-Table of content is basically an unordened list where each element of list referecens a link with a heading anchor, listing the documento itself by it's heading strucure
+Table of content is basically an unordered list where each element of list references a link with a heading anchor, listing the documents itself by it's heading structure.
 
 #### Example-15
 
 ![table of content](imgs/example-15.jpg)
 
-Output
+**Output:**
 
 ![table of content](imgs/output-15.jpg)
 
@@ -373,14 +386,14 @@ After second line any new line will be new row in the table
 
 #### Example-16
 
-```md
+```txt
 | Name      |  Age  | Height  |
 | :-------- | :---: | :-----: |
 | Lucas     |  35   | 1.76m   |
 | Someone   |  35   | 1.61m   |
 ```
 
-Output
+**Output:**
 
 | Name      |  Age  | Height  |
 | :-------- | :---: | :-----: |
@@ -401,7 +414,7 @@ An absolute, or full, path begins with a drive letter followed by a colon, such 
 
 A relative path refers to a location that is relative to a current directory. Relative paths make use of two special symbols, a dot (.) and a double-dot (..), which translate into the current directory and the parent directory. Double dots are used for moving up in the hierarchy. A single dot represents the current directory itself.
 
-In the example directory structure below, assume you used Windows Explorer to navigate to D:\Data\Shapefiles\Soils. After navigating to this directory, a relative path will use D:\Data\Shapefiles\Soils as the current directory (until you navigate to a new directory, at which point the new directory becomes the current directory). The current directory is sometimes referred to as the root directory.
+In the example directory structure below, assume you used Windows Explorer to navigate to `D:\Data\Shapefiles\Soils`. After navigating to this directory, a relative path will use `D:\Data\Shapefiles\Soils` as the current directory (until you navigate to a new directory, at which point the new directory becomes the current directory). The current directory is sometimes referred to as the root directory.
 
 *Reference:* [Paths explained](#paths)
 
@@ -410,11 +423,11 @@ In the example directory structure below, assume you used Windows Explorer to na
 | Syntax             |      Purpose      | Usage                          |             Example              |
 | :----------------- | :---------------: | :----------------------------- | :------------------------------: |
 | #                  |      Titles       | `#` My Title                   |       [Titles](#example-1)       |
-| ##                 |     Subtitles     | `##` My Subitle                |     [Subtitles](#example-2)      |
-| ###                |     Subtitles     | `###` My Subitle               |     [Subtitles](#example-2)      |
-| ####               |     Subtitles     | `####` My Subitle              |     [Subtitles](#example-2)      |
-| #####              |     Subtitles     | `#####` My Subitle             |     [Subtitles](#example-2)      |
-| ######             |     Subtitles     | `######` My Subitle            |     [Subtitles](#example-2)      |
+| ##                 |     Subtitles     | `##` My Subtitle               |     [Subtitles](#example-2)      |
+| ###                |     Subtitles     | `###` My Subtitle              |     [Subtitles](#example-2)      |
+| ####               |     Subtitles     | `####` My Subtitle             |     [Subtitles](#example-2)      |
+| #####              |     Subtitles     | `#####` My Subtitle            |     [Subtitles](#example-2)      |
+| ######             |     Subtitles     | `######` My Subtitle           |     [Subtitles](#example-2)      |
 | >                  |     Highlight     | `>` Important sentence         |     [Blockquote](#example-3)     |
 | *                  |     Emphasize     | My `*`important`*` text        |     [Emphasize](#example-4)      |
 | -                  |     Emphasize     | My `_`important`_` text        |     [Emphasize](#example-4)      |
@@ -425,7 +438,7 @@ In the example directory structure below, assume you used Windows Explorer to na
 | \[label\]\(url\)   |       Links       | \[home\]\(example.com\)        |         [links](#links)          |
 | \!\[name\]\(path\) |      Images       | \[Thumb\]\(thumb.jpg\)         |        [Images](#images)         |
 | `n`.               |       List        | `1.` Open the box              |   [Ordered List](#example-13)    |
-| -                  |       List        | `-` Random List                |   [Unrdered List](#example-14)   |
+| -                  |       List        | `-` Random List                |   [Unordered List](#example-14)  |
 | - \[label\]\(url\) | Table of contents | `- [summary](#summary)`        | [Table of contents](#example-15) |
 |                    |      Table        |                                |       [Tables](#example-16)      |
 
