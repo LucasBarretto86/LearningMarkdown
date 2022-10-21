@@ -37,25 +37,19 @@
     - [Gif](#gif)
       - [Example-12](#example-12)
   - [Lists](#lists)
-  - [TODO List](#todo-list)
     - [Ordered List](#ordered-list)
       - [Example-13](#example-13)
     - [Unordered List](#unordered-list)
       - [Example-14](#example-14)
+  - [TODO List](#todo-list)
     - [Table of Contents](#table-of-contents)
       - [Example-15](#example-15)
   - [Table](#table)
     - [Head](#head)
     - [Body](#body)
       - [Example-16](#example-16)
-  - [Appendix](#appendix)
-    - [What is a Slug?](#what-is-a-slug)
-    - [Absolute and Relative paths](#absolute-and-relative-paths)
   - [Code Table](#code-table)
   - [References](#references)
-    - [Markdown Official Project](#markdown-official-project)
-    - [Slug](#slug)
-    - [Paths](#paths)
 
 ## What is Markdown?
 
@@ -297,22 +291,6 @@ Images works almost exactly like links, the only difference is the syntax becaus
 
 ## Lists
 
-## TODO List
-
-To create a todo list it's used the prefix `- [ ]`, to check this todo it's used `- [X]`
-
-```txt
-- [ ] First do this
-- [ ] After do that
-- [ ] After that do that too
-```
-
-**Output:**
-
-- [ ] First do this
-- [ ] After do that
-- [ ] After that do that too
-
 ### Ordered List
 
 To create a list prepend a numeric order prefix `1.`.
@@ -353,6 +331,22 @@ To create a list prepend `-`.
 ```
 
 **Output:**
+
+## TODO List
+
+To create a todo list it's used the prefix `- [ ]`, to check this todo it's used `- [X]`
+
+```txt
+- [ ] First do this
+- [ ] After do that
+- [ ] After that do that too
+```
+
+**Output:**
+
+- [ ] First do this
+- [ ] After do that
+- [ ] After that do that too
 
 ### Table of Contents
 
@@ -400,24 +394,6 @@ After second line any new line will be new row in the table
 | Lucas     |  35   | 1.76m   |
 | Someone   |  35   | 1.61m   |
 
-## Appendix
-
-### What is a Slug?
-
-What is a Slug? A slug is the last part of the url containing a unique string which identifies the resource being served by the web service. In that sense, a slug is a unique identifier for the resource.
-
-*Reference:* [Slug](#slug)
-
-### Absolute and Relative paths
-
-An absolute, or full, path begins with a drive letter followed by a colon, such as D:.
-
-A relative path refers to a location that is relative to a current directory. Relative paths make use of two special symbols, a dot (.) and a double-dot (..), which translate into the current directory and the parent directory. Double dots are used for moving up in the hierarchy. A single dot represents the current directory itself.
-
-In the example directory structure below, assume you used Windows Explorer to navigate to `D:\Data\Shapefiles\Soils`. After navigating to this directory, a relative path will use `D:\Data\Shapefiles\Soils` as the current directory (until you navigate to a new directory, at which point the new directory becomes the current directory). The current directory is sometimes referred to as the root directory.
-
-*Reference:* [Paths explained](#paths)
-
 ## Code Table
 
 | Syntax             |      Purpose      | Usage                          |             Example              |
@@ -444,14 +420,4 @@ In the example directory structure below, assume you used Windows Explorer to na
 
 ## References
 
-### Markdown Official Project
-
-[daringfireball.net](https://daringfireball.net/projects/markdown/)
-
-### Slug
-
-[Web Developer Playbook: Slug](https://medium.com/dailyjs/web-developer-playbook-slug-a6dcbe06c284)
-
-### Paths
-
-[Paths explained: Absolute, relative, UNC, and URL](https://desktop.arcgis.com/en/arcmap/10.3/tools/supplement/pathnames-explained-absolute-relative-unc-and-url.htm#GUID-5118AC85-57E4-4027-AC24-FB6E99FADEFF)
+- [Markdown Official Project](https://daringfireball.net/projects/markdown/)
