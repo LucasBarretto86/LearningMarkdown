@@ -37,7 +37,10 @@
   - [Table](#table)
     - [Head](#head)
     - [Body](#body)
-  - [References](#references)
+  - [Appendix](#appendix)
+    - [What is a Slug?](#what-is-a-slug)
+    - [Absolute and Relative paths](#absolute-and-relative-paths)
+  - [Notes](#notes)
 
 ## What is Markdown?
 
@@ -374,8 +377,22 @@ After second line any new line will be new row in the table
 | Lucas     |  35   | 1.76m   |
 | Someone   |  35   | 1.61m   |
 
-## References
+## Appendix
 
-- [^1]: [Markdown Official Project](https://daringfireball.net/projects/markdown/)
-- [^2]: [What is a Slug?](#what-is-a-slug)
-- [^3]: [Absolute and Relative paths](#absolute-and-relative-paths)
+### What is a Slug?
+
+What is a Slug? A slug is the last part of the url containing a unique string which identifies the resource being served by the web service. In that sense, a slug is a unique identifier for the resource.
+
+### Absolute and Relative paths
+
+An absolute, or full, path begins with a drive letter followed by a colon, such as D:.
+
+A relative path refers to a location that is relative to a current directory. Relative paths make use of two special symbols, a dot (.) and a double-dot (..), which translate into the current directory and the parent directory. Double dots are used for moving up in the hierarchy. A single dot represents the current directory itself.
+
+In the example directory structure below, assume you used Windows Explorer to navigate to `D:\Data\Shapefiles\Soils`. After navigating to this directory, a relative path will use `D:\Data\Shapefiles\Soils` as the current directory (until you navigate to a new directory, at which point the new directory becomes the current directory). The current directory is sometimes referred to as the root directory.
+
+## Notes
+
+[^1]:[Markdown Official Project](https://daringfireball.net/projects/markdown/)
+[^2]:[What is a Slug?](#what-is-a-slug)
+[^3]:[Absolute and Relative paths](#absolute-and-relative-paths)
