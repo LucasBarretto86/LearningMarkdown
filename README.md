@@ -8,46 +8,35 @@
   - [Disclaimer](#disclaimer)
   - [Titles and subtitles](#titles-and-subtitles)
     - [Titles](#titles)
-      - [Example-1](#example-1)
     - [Subtitles](#subtitles)
-      - [Example-2](#example-2)
   - [Text](#text)
     - [Regular paragraph](#regular-paragraph)
     - [Blockquote](#blockquote)
-      - [Example-3](#example-3)
     - [Emphasizing](#emphasizing)
-      - [Example-4](#example-4)
     - [Bold](#bold)
-      - [Example-5](#example-5)
+    - [Subscript](#subscript)
+    - [Superscript](#superscript)
   - [Code](#code)
     - [Code inline](#code-inline)
-      - [Example-6](#example-6)
     - [Code block](#code-block)
-      - [Example-7](#example-7)
   - [Links](#links)
     - [External links](#external-links)
-      - [Example-8](#example-8)
     - [Anchors](#anchors)
-      - [Example-9](#example-9)
     - [Local File links](#local-file-links)
-      - [Example-10](#example-10)
   - [Images](#images)
     - [Regular images](#regular-images)
-      - [Example-11](#example-11)
     - [Gif](#gif)
-      - [Example-12](#example-12)
   - [Lists](#lists)
     - [Ordered List](#ordered-list)
-      - [Example-13](#example-13)
     - [Unordered List](#unordered-list)
-      - [Example-14](#example-14)
   - [TODO List](#todo-list)
     - [Table of Contents](#table-of-contents)
-      - [Example-15](#example-15)
+  - [Foot notes](#foot-notes)
+    - [Numbered footnotes](#numbered-footnotes)
+    - [Big footnotes, multiple lines note](#big-footnotes-multiple-lines-note)
   - [Table](#table)
     - [Head](#head)
     - [Body](#body)
-      - [Example-16](#example-16)
   - [Code Table](#code-table)
   - [References](#references)
 
@@ -71,7 +60,7 @@ To set title and subtitles prepend `#` on the begin of a line you want to turn i
 
 ### Titles
 
-#### Example-1
+**Example 1:**
 
 ```txt
 # This is a Title
@@ -85,7 +74,7 @@ To set title and subtitles prepend `#` on the begin of a line you want to turn i
 
 ### Subtitles
 
-#### Example-2
+**Example 2:**
 
 ```txt
 ## This is a Subtitle
@@ -113,7 +102,7 @@ Highlight a sentence by prepending `>` on beginning of a line you want to turn i
 
 You can nest many blockquote you want by prepending more `>` together, each `>` adds a new blockquote level.
 
-#### Example-3
+**Example 3:**
 
 ```txt
 > This is a highlighted text in your notes
@@ -131,7 +120,7 @@ You can nest many blockquote you want by prepending more `>` together, each `>` 
 
 To emphasize some bit of a paragraph add around the text to be emphasized single `*`.
 
-#### Example-4
+**Example 4:**
 
 ```txt
 Some of these words *are emphasized*.
@@ -147,7 +136,7 @@ Some of these words *are emphasized*.
 
 To turn a bit of a paragraph into bold add around the text to be bolded double `*` or double `_`
 
-#### Example-5
+**Example 5:**
 
 ```txt
 Words can't describe how **strong** LOVE can be.
@@ -163,13 +152,31 @@ Words can't describe how **strong** LOVE can be.
 
 [Go to Code Table](#code-table)
 
+### Subscript
+
+```md
+H~2~O
+```
+
+**Output:**
+H~2~O
+
+### Superscript
+
+```md
+X^2^
+```
+
+**Output:**
+X^2^
+
 ## Code
 
 ### Code inline
 
 To add snippets of code inside a paragraph, to make some kind of reference add around the code single \`
 
-#### Example-6
+**Example 6:**
 
 ```txt
 This paragraph contains a snippet of code `code_reference`
@@ -185,7 +192,7 @@ This paragraph contains a snippet of code `print("Hello Wold")`
 
 To add block of code to show in detail a code add triples \`.
 
-#### Example-7
+**Example 7:**
 
 ~~~txt
   ```py(rb, js, cpp, md)
@@ -217,7 +224,7 @@ greetings(names[1])
 
 To add external links use the syntax `[Link label](website_address)`
 
-#### Example-8
+**Example 8:**
 
 ```txt
 [QQ home page](https://im.qq.com/index)
@@ -235,7 +242,7 @@ Anchors are used when you want to make a reference to the same file but throwing
 
 Notice that you have to convert header title or subtitle into a slug [What is a Slug?](#what-is-a-slug) and you have to prepend a single `#`
 
-#### Example-9
+**Example 9:**
 
 ```txt
 [What is Markdown?](#what-is-markdown)
@@ -251,7 +258,7 @@ To add links to local files use the syntax `[Link label](path_from_the_file)`
 
 Notice that you need to do use a relative path, read more about that in [Absolute and Relative paths](#absolute-and-relative-paths)
 
-#### Example-10
+**Example 10:**
 
 ```txt
 [Example](example-10/local_file.md)
@@ -267,7 +274,7 @@ Images works almost exactly like links, the only difference is the syntax becaus
 
 ### Regular images
 
-#### Example-11
+**Example 11:**
 
 ```txt
 ![ Example](imgs/image.png)
@@ -279,7 +286,7 @@ Images works almost exactly like links, the only difference is the syntax becaus
 
 ### Gif
 
-#### Example-12
+**Example 12:**
 
 ```txt
 ![Example](imgs/run.gif)
@@ -295,7 +302,7 @@ Images works almost exactly like links, the only difference is the syntax becaus
 
 To create a list prepend a numeric order prefix `1.`.
 
-#### Example-13
+**Example 13:**
 
 ```txt
 1. Put oil on the pan
@@ -325,7 +332,7 @@ To create a list prepend `-`.
   - Chapter 1
     - First topic
 
-#### Example-14
+**Example 14:**
 
 ```txt
 ```
@@ -352,13 +359,42 @@ To create a todo list it's used the prefix `- [ ]`, to check this todo it's used
 
 Table of content is basically an unordered list where each element of list references a link with a heading anchor, listing the documents itself by it's heading structure.
 
-#### Example-15
+**Example 15:**
 
 ![table of content](imgs/example-15.jpg)
 
 **Output:**
 
 ![table of content](imgs/output-15.jpg)
+
+## Foot notes
+
+In markdown we can also add footnotes, for that we use `[^1]` or `[^bignote]`
+
+### Numbered footnotes
+
+```md
+This text is an example [^1], and this text is another example [^2]
+
+[^1]: An example is just a demonstration
+[^2]: This is just another demonstration
+```
+
+**Output**:
+
+This text is an example [^1], and this text is another example [^2]
+
+[^1]: An example is just a demonstration
+[^2]: This is just another demonstration
+
+### Big footnotes, multiple lines note
+
+**Output**:
+
+This text is an example [^bignote]
+
+[^bignote]: This is an example from a big note.
+  Basically it means a multiline note
 
 ## Table
 
@@ -378,7 +414,7 @@ Second line is where you define the alignment of the content:
 
 After second line any new line will be new row in the table
 
-#### Example-16
+**Example 16:**
 
 ```txt
 | Name      |  Age  | Height  |
