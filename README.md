@@ -38,6 +38,9 @@
     - [Head](#head)
     - [Body](#body)
   - [Appendix](#appendix)
+    - [Diagrams](#diagrams)
+      - [Mermaid Diagrams](#mermaid-diagrams)
+      - [Ditaa Diagrams](#ditaa-diagrams)
     - [What is a Slug?](#what-is-a-slug)
     - [Absolute and Relative paths](#absolute-and-relative-paths)
   - [Notes](#notes)
@@ -60,7 +63,7 @@ To set title and subtitles prepend `#` on the begin of a line you want to turn i
 
 ### Titles
 
-```txt
+```mono
 # This is a Title
 ```
 
@@ -70,7 +73,7 @@ To set title and subtitles prepend `#` on the begin of a line you want to turn i
 
 ### Subtitles
 
-```txt
+```mono
 ## This is a Subtitle
 ### This is a Subtitle
 #### This is a Subtitle
@@ -94,7 +97,7 @@ Highlight a sentence by prepending `>` on beginning of a line you want to turn i
 
 You can nest many blockquote you want by prepending more `>` together, each `>` adds a new blockquote level.
 
-```txt
+```mono
 > This is a highlighted text in your notes
 >> Many blockquote nested
 ```
@@ -108,7 +111,7 @@ You can nest many blockquote you want by prepending more `>` together, each `>` 
 
 To emphasize some bit of a paragraph add around the text to be emphasized single `*`.
 
-```txt
+```mono
 Some of these words *are emphasized*.
 ```
 
@@ -120,7 +123,7 @@ Some of these words *are emphasized*.
 
 To turn a bit of a paragraph into bold add around the text to be bolded double `*` or double `_`
 
-```txt
+```mono
 Words can't describe how **strong** LOVE can be.
 
 Words can't describe how __strong__ LOVE can be.
@@ -134,7 +137,7 @@ Words can't describe how **strong** LOVE can be.
 
 ### Subscript
 
-```txt
+```mono
 H~2~O
 ```
 
@@ -143,7 +146,7 @@ H~2~O
 
 ### Superscript
 
-```txt
+```mono
 X^2^
 ```
 
@@ -156,7 +159,7 @@ X^2^
 
 To add snippets of code inside a paragraph, to make some kind of reference add around the code single \`
 
-```txt
+```mono
 This paragraph contains a snippet of code `code_reference`
 ```
 
@@ -168,7 +171,7 @@ This paragraph contains a snippet of code `print("Hello Wold")`
 
 To add block of code to show in detail a code add triples \`.
 
-~~~txt
+~~~mono
   ```py(rb, js, cpp, md)
   names = ["Lucas", "Someone"]
   
@@ -196,7 +199,7 @@ greetings(names[1])
 
 To add external links use the syntax `[Link label](website_address)`
 
-```txt
+```mono
 [QQ home page](https://im.qq.com/index)
 ```
 
@@ -210,7 +213,7 @@ Anchors are used when you want to make a reference to the same file but throwing
 
 Notice that you have to convert header title or subtitle into a slug[^2]  and you have to prepend a single `#`
 
-```txt
+```mono
 [What is Markdown?](#what-is-markdown)
 ```
 
@@ -224,7 +227,7 @@ To add links to local files use the syntax `[Link label](path_from_the_file)`
 
 Notice that you need to do use a relative path[^3]
 
-```txt
+```mono
 [Example](example-10/local_file.md)
 ```
 
@@ -238,7 +241,7 @@ Images works almost exactly like links, the only difference is the syntax becaus
 
 ### Regular images
 
-```txt
+```mono
 ![ Example](imgs/image.png)
 ```
 
@@ -248,7 +251,7 @@ Images works almost exactly like links, the only difference is the syntax becaus
 
 ### Gif
 
-```txt
+```mono
 ![Example](imgs/run.gif)
 ```
 
@@ -262,7 +265,7 @@ Images works almost exactly like links, the only difference is the syntax becaus
 
 To create a list prepend a numeric order prefix `1.`.
 
-```txt
+```mono
 1. Put oil on the pan
 2. Break the eggs
 3. Put eggs on the pan scramble it
@@ -278,7 +281,7 @@ To create a list prepend a numeric order prefix `1.`.
 
 To create a list prepend `-`.
 
-```txt
+```mono
 - Summary
   - Chapter 1
     - First topic
@@ -294,7 +297,7 @@ To create a list prepend `-`.
 
 To create a todo list it's used the prefix `- [ ]`, to check this todo it's used `- [X]`
 
-```txt
+```mono
 - [ ] First do this
 - [ ] After do that
 - [ ] After that do that too
@@ -322,7 +325,7 @@ In markdown we can also add footnotes, for that we use `[^1]` or `[^bignote]`
 
 ### Numbered footnotes
 
-```txt
+```mono
 This text is an example [^4], and this text is another example [^5]
 
 [^4]: An example is just a demonstration
@@ -363,7 +366,7 @@ Second line is where you define the alignment of the content:
 
 After second line any new line will be new row in the table
 
-```txt
+```mono
 | Name      |  Age  | Height  |
 | :-------- | :---: | :-----: |
 | Lucas     |  35   | 1.76m   |
@@ -379,13 +382,72 @@ After second line any new line will be new row in the table
 
 ## Appendix
 
+### Diagrams
+
+Enhanced Markdown allow you to create diagrams, eventually it might require external dependencies, for instance `Mermaid` is built in Javascript, however `Ditaa` uses Java, so it requires you to install Java
+
+#### Mermaid Diagrams
+
+Mermaid allow you to draw my kinds of diagrams, but in my experience it seems more literal than visual, so for complex diagram is might get difficult to code
+
+~~~mono
+  ```mermaid
+  graph LR
+    A --> B
+    B --> C
+  ```
+~~~
+
+**Output:**
+
+```mermaid
+graph LR
+  A --> B
+  B --> C
+```
+
+[Read more about Mermaid on `LearningMermaid` project](/specifics/LearningMermaid/README.md)
+
+#### Ditaa Diagrams
+
+Ditaa is something new for me but to me it seems more intuitive, it feels like you are really drawing  
+
+~~~mono
+  ```ditaa cmd=true
+
+  +-----------------+       +--------+           +--------------------+
+  | markdown source |------>| mdddia |------*--->| processed markdown |
+  +-----------------+       +--------+      |    +--------------------+
+                                |           \--->| image files        |
+                      +------------------+       +--------------------+
+                      | diagram creation |
+                      +------------------+
+                      | ditaa/dot/rdfdot |
+                      +------------------+
+  ```
+~~~
+
+**Output:**
+
+```ditaa cmd=true
++-----------------+       +--------+           +--------------------+
+| markdown source |------>| mdddia |------*--->| processed markdown |
++-----------------+       +--------+      |    +--------------------+
+                              |           \--->| image files        |
+                    +------------------+       +--------------------+
+                    | diagram creation |
+                    +------------------+
+                    | ditaa/dot/rdfdot |
+                    +------------------+
+```
+
 ### What is a Slug?
 
 What is a Slug? A slug is the last part of the url containing a unique string which identifies the resource being served by the web service. In that sense, a slug is a unique identifier for the resource.
 
 ### Absolute and Relative paths
 
-An absolute, or full, path begins with a drive letter followed by a colon, such as D:.
+An absolute, or full, path begins with a drive letter followed by a colon, such as `D:`.
 
 A relative path refers to a location that is relative to a current directory. Relative paths make use of two special symbols, a dot (.) and a double-dot (..), which translate into the current directory and the parent directory. Double dots are used for moving up in the hierarchy. A single dot represents the current directory itself.
 
