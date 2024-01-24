@@ -171,15 +171,15 @@ This paragraph contains a snippet of code `print("Hello Wold")`
 
 To add block of code to show in detail a code add triples \`.
 
-~~~mono
-  ```py(rb, js, cpp, md)
-  names = ["Lucas", "Someone"]
-  
-  def greetings(name):
-      print(f"Hello {name}")
-  
-  greetings(names[1])
-  ```
+~~~
+```py(rb, js, cpp, md)
+names = ["Lucas", "Someone"]
+
+def greetings(name):
+    print(f"Hello {name}")
+
+greetings(names[1])
+```
 ~~~
 
 **Output:**
