@@ -390,13 +390,14 @@ Enhanced Markdown allow you to create diagrams, eventually it might require exte
 
 Mermaid allow you to draw my kinds of diagrams, but in my experience it seems more literal than visual, so for complex diagram is might get difficult to code
 
-~~~mono
+```mono
+
   ```mermaid
   graph LR
     A --> B
     B --> C
   ```
-~~~
+```
 
 **Output:**
 
@@ -425,7 +426,7 @@ Ditaa is something new for me but to me it seems more intuitive, it feels like y
                       | ditaa/dot/rdfdot |
                       +------------------+
   ```
-~~~
+```
 
 **Output:**
 
